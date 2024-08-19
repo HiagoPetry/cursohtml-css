@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5t</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.
+    </p>
+    <img src="imagens/foto-g.png" alt="width:100%">
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <audio src="midia/guanacast-33.mp3" controls autoplay></audio>
+    <audio src="midia/mess-call-usaf-heritage-of-america-band.mp3"controls autoplay></audio>
+    <audio src="midia/operator-error(sting)-gunnar-olsen.mp3" controls autoplay></audio>
+    <audio preload="metadata">
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.mp3" type="audio/ogg">
+        <source src="midia/guanacast-33.mp3" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. <a href="midia/guanacast-33.mp3"> Clique aqui para fazer o dowload do arquivo MP3</a></p>
+    </audio>
+</body>
+</html>
