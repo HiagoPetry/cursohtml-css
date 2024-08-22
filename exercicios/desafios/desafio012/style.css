@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-* {
+* {    /*configurações universais para iniciar suas estilizações*/
     margin: 0px;
     padding: 0px;
 }
@@ -36,9 +36,9 @@ a:hover {
 }
 
 section {
-    padding-top: 10vh;
+    padding-top: 10vh;   /* vh= Tamanho da view port ou seja tamanho da tela*/
     padding-bottom: 10vh;
-    line-height: 2em;
+    line-height: 2em;     /*Altura entre as linhas*/
     padding-left: 40px;
 }
 
