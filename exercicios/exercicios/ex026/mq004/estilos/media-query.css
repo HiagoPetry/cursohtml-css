@@ -1,3 +1,94 @@
 @charset "UTF-8";
 
 /* Todas as demais mídias */
+
+/* PESQUISAR SOBRE AS TYPICAL DEVICE BREAKPOINTS DE HOJE EM DIA */ 
+
+/* As typycal device breakpoints são:
+
+-----------------------------------------------------------------
+DADOS DO GUANABARA DO CURSO
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px 
+Grandes telas: acima de 1200px 
+
+DADOS DO CHATGPT HOJE EM DIA 2024
+1- Smaller devices (telas pequenas) modo portrait (modo retrato)
+. 320px (ou menos): Smartphones mais antigos;
+. 360px: Comuns para Androids;
+. 375px: Iphones modo retrato;
+
+2- Medium device (phones em modo landscape e pequenos tablets)
+. 480px: Smartphones modo paisagem e pequenos dispositivos;
+. 600px: Normalmente tablets em modo retrato;
+
+3- Larger devices (tablets em modo landscape e pequenos desktops)
+. 768px: Padrão tablet modo paisagem e algumas telas de notebook;
+. 992px: Telas de desktops pequenos, laptops maiores e alguns dispositivos de telas médias;
+
+4- Extra Larger device (Desktops e grandes telas)
+. 1200px: Para desktops e grandes monitores, garantindo que o conteúdo se ajuste adequadamente em telas maiores;
+. 1440px e acima: Monitores de alta resolução e grandes telas e muitas vezes usado em desktops muito grandes; */
+
+@media print { /* IMPRESSÃO */ 
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body {
+        background-image: url(../imagens/back-print.jpg); /*desnecessário*/
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /*TABLET*/ 
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /*DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1200px) { /*GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+}
